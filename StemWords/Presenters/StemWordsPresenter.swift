@@ -29,10 +29,20 @@ class StemWordsPresenter {
         let originalWords = extractedWords(from: string)
         
         originalWords.forEach { word in
-            // check if has removableSuffix
-            if let rootWord = removableSuffix(from: word, suffixes: grammarRules.removableSuffix) {
+            
+            /** Account for cases where shorter suffixes match before longer, more accurate ones
+                Ex: "L" is matched before more accurate "EZL" gets matched */
+            if let suffix = matchingSuffix(from: word), grammarRules.replaceableSuffix.keys.contains(suffix) {
+                guard let replacement = grammarRules.replaceableSuffix[suffix] else {
+                    return
+                }
+                
+                let rootWord = wordWithReplaceableSuffix(from: word, suffix: suffix, replacement: replacement)
+                
                 addStemWord(word: rootWord)
-            } else if let rootWord = replaceableSuffix(from: word, suffixes: grammarRules.replaceableSuffix) {
+            } else if let suffix = matchingSuffix(from: word), grammarRules.removableSuffix.contains(suffix) {
+                let rootWord = rootWordExtractor(word: word, suffix: suffix)
+                
                 addStemWord(word: rootWord)
             } else {
                 addStemWord(word: word)
@@ -64,10 +74,11 @@ class StemWordsPresenter {
         return cleanWords
     }
     
-    private func removableSuffix(from word: String, suffixes: [String]) -> String? {
-        var rootWord: String?
+    private func matchingSuffix(from word: String) -> String? {
+        let allSuffixes = suffixCombiner()
+        var matchingSuffix: String?
         
-        _ = suffixes.first { suffix -> Bool in
+        _ = allSuffixes.first { suffix -> Bool in
             guard word.count >= suffix.count else {
                 return false
             }
@@ -75,7 +86,7 @@ class StemWordsPresenter {
             let substring = word.suffixExtractor(withLength: suffix.count)
             
             if substring.caseInsensitiveCompare(suffix) == .orderedSame {
-                rootWord = rootWordExtractor(word: word, suffix: suffix)
+                matchingSuffix = String(substring)
                 
                 return true
             } else {
@@ -83,7 +94,15 @@ class StemWordsPresenter {
             }
         }
         
-        return rootWord
+        return matchingSuffix
+    }
+    
+    private func suffixCombiner() -> [String] {
+        var allSuffixes = grammarRules.removableSuffix
+        allSuffixes.append(contentsOf: grammarRules.replaceableSuffix.keys)
+        allSuffixes.sort { $0.count > $1.count }
+        
+        return allSuffixes
     }
     
     private func rootWordExtractor(word: String, suffix: String) -> String {
@@ -92,28 +111,6 @@ class StemWordsPresenter {
         mutableWord.removeSubrange(range)
         
         return mutableWord
-    }
-    
-    private func replaceableSuffix(from word: String, suffixes: [String: String]) -> String? {
-        var rootWord: String?
-        
-        _ = suffixes.first(where: { (suffix, replacement) -> Bool in
-            guard word.count >= suffix.count else {
-                return false
-            }
-            
-            let substring = word.suffixExtractor(withLength: suffix.count)
-            
-            if substring.caseInsensitiveCompare(suffix) == .orderedSame {
-                rootWord = wordWithReplaceableSuffix(from: word, suffix: suffix, replacement: replacement)
-                
-                return true
-            } else {
-                return false
-            }
-        })
-        
-        return rootWord
     }
     
     private func wordWithReplaceableSuffix(from word: String, suffix: String, replacement: String) -> String {
