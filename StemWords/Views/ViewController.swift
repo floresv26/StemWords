@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, StemWordsPresenterDelegate {
     
     // MARK: - Outlets
     
@@ -16,6 +16,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet private weak var findRootButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var clearRootsButton: UIButton!
+    
+    // MARK: - Properties
+    
+    private let presenter = StemWordsPresenter()
     
     // MARK: - Lifecycle
 
@@ -25,14 +29,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         textField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        presenter.setViewDelegate(delegate: self)
         
         tableView.register(UINib(nibName: "RootWordTableViewCell", bundle: nil), forCellReuseIdentifier: "RootWordCellIdentifier")
+    }
+    
+    func updateStemWords(with models: [RootWordTableViewCellPresenter]) {
+        tableView.reloadData()
+        
+        if !presenter.stemWordModels.isEmpty {
+            clearRootsButton.isEnabled = true
+        }
     }
     
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return presenter.stemWordModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,8 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("RootWordCellIdentifier does not exist.")
         }
         
-        // Configure the cell’s contents.
-        
+        cell.configure(with: presenter.stemWordModels[indexPath.row])
             
         return cell
     }
@@ -77,13 +89,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func clearRootsButtonPressed(_ sender: Any) {
+        presenter.clearStemWords()
+        clearRootsButton.isEnabled = false
     }
     
     // MARK: - Helpers
     
     private func findRoots() {
         if let text = textField.text, !text.isEmpty {
-            // send text to presenter
+            presenter.findRootWords(from: text)
             textField.text = nil
             findRootButton.isEnabled = false
         }

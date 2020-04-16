@@ -9,13 +9,15 @@
 import Foundation
 
 protocol StemWordsPresenterDelegate: NSObjectProtocol {
-    
+    func updateStemWords(with models: [RootWordTableViewCellPresenter])
 }
 
 class StemWordsPresenter {
     
     // MARK: - Properties
     
+    var stemWordModels: [RootWordTableViewCellPresenter] = []
+    private var stemWords: [String: Int] = [:]
     private let grammarRules = GrammarRules()
     weak private var delegate: StemWordsPresenterDelegate?
     
@@ -29,18 +31,21 @@ class StemWordsPresenter {
         originalWords.forEach { word in
             // check if has removableSuffix
             if let rootWord = removableSuffix(from: word, suffixes: grammarRules.removableSuffix) {
-                // if word in list then increase count
-                print(rootWord)
-                // else add word to list and increase count
+                addStemWord(word: rootWord)
             } else if let rootWord = replaceableSuffix(from: word, suffixes: grammarRules.replaceableSuffix) {
-                // if word in list then increase count
-                print(rootWord)
-                // else add word to list and increase count
+                addStemWord(word: rootWord)
             } else {
-                // if word in list then increase count
-                // else add word to list and increase count
+                addStemWord(word: word)
             }
         }
+        
+        updateStemWordModels()
+        delegate?.updateStemWords(with: stemWordModels)
+    }
+    
+    func clearStemWords() {
+        stemWordModels = []
+        delegate?.updateStemWords(with: stemWordModels)
     }
     
     // MARK: - Helpers
@@ -117,5 +122,23 @@ class StemWordsPresenter {
         mutableWord.replaceSubrange(range, with: replacement)
         
         return mutableWord
+    }
+    
+    private func addStemWord(word: String) {
+        if stemWords.keys.contains(word) {
+            stemWords[word]! += 1
+        } else {
+            stemWords[word] = 1
+        }
+    }
+    
+    private func updateStemWordModels() {
+        let updatedStemWordModels = stemWords.map { (rootWord, count) -> RootWordTableViewCellPresenter in
+            let presenter = RootWordTableViewCellPresenter(rootWord: rootWord, rootWordCount: String(count))
+            
+            return presenter
+        }
+        
+        stemWordModels = updatedStemWordModels
     }
 }

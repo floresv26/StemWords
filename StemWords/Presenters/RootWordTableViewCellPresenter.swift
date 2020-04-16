@@ -8,26 +8,17 @@
 
 import Foundation
 
-protocol RootWordTableViewCellPresenterDelegate: NSObjectProtocol {
-    
-}
-
 class RootWordTableViewCellPresenter {
     
     // MARK: - Properties
     
-    private let rootWord: String
-    private let rootWordCount: Int
-    private weak var delegate: RootWordTableViewCellPresenterDelegate?
+    let rootWord: String
+    let rootWordCount: String
     
     // MARK: - Initializers
     
-    init(rootWord: String, rootWordCount: Int) {
+    init(rootWord: String, rootWordCount: String) {
         self.rootWord = rootWord
         self.rootWordCount = rootWordCount
-    }
-    
-    func setViewDelegate(delegate: RootWordTableViewCellPresenterDelegate?) {
-        self.delegate = delegate
     }
 }

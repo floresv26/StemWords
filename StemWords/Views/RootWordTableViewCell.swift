@@ -8,18 +8,19 @@
 
 import UIKit
 
-class RootWordTableViewCell: UITableViewCell, RootWordTableViewCellPresenterDelegate {
+class RootWordTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     
     @IBOutlet private weak var rootWordLabel: UILabel!
     @IBOutlet private weak var countLabel: UILabel!
     
-    // MARK: - Properties
-    
-//    private let rootWordsCellPresenter: RootWordTableViewCellPresenterDelegate?
-    
     // MARK: - Lifecycle
+    
+    func configure(with presenter: RootWordTableViewCellPresenter) {
+        rootWordLabel.text = presenter.rootWord
+        countLabel.text = presenter.rootWordCount
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
