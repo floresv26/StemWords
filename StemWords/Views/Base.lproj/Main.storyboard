@@ -28,20 +28,34 @@
                                         <rect key="frame" x="0.0" y="0.0" width="296" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldDonePressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="4Te-HC-zPU"/>
+                                            <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="0TJ-DE-gbH"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-Mk-DVX">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-Mk-DVX">
                                         <rect key="frame" x="316" y="0.0" width="66" height="34"/>
                                         <state key="normal" title="Find Root"/>
+                                        <connections>
+                                            <action selector="findRootsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVR-Vq-XZ5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-eN-lXo">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-eN-lXo">
                                 <rect key="frame" x="318" y="162" width="80" height="30"/>
                                 <state key="normal" title="Clear Roots"/>
+                                <connections>
+                                    <action selector="clearRootsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3S-AT-cYG"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8r7-cN-iLk">
                                 <rect key="frame" x="0.0" y="212" width="414" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ISo-Rc-VEm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bJe-HM-swS"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -62,6 +76,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="clearRootsButton" destination="ib3-eN-lXo" id="lDO-Re-3xU"/>
+                        <outlet property="findRootButton" destination="gaE-Mk-DVX" id="Fw2-8T-9Vx"/>
+                        <outlet property="tableView" destination="8r7-cN-iLk" id="jf9-0d-L04"/>
+                        <outlet property="textField" destination="E4K-nw-VuN" id="78Q-zF-kMd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

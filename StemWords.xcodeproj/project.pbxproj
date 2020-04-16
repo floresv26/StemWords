@@ -14,6 +14,8 @@
 		A3BCAD3424489B5200CB3D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD3324489B5200CB3D22 /* Assets.xcassets */; };
 		A3BCAD3724489B5200CB3D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD3524489B5200CB3D22 /* LaunchScreen.storyboard */; };
 		A3BCAD4224489B5200CB3D22 /* StemWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD4124489B5200CB3D22 /* StemWordsTests.swift */; };
+		A3BCAD522448A47300CB3D22 /* RootWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */; };
+		A3BCAD532448A47300CB3D22 /* RootWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		A3BCAD3D24489B5200CB3D22 /* StemWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StemWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BCAD4124489B5200CB3D22 /* StemWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsTests.swift; sourceTree = "<group>"; };
 		A3BCAD4324489B5200CB3D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWordTableViewCell.swift; sourceTree = "<group>"; };
+		A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootWordTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +83,14 @@
 		A3BCAD2924489B4F00CB3D22 /* StemWords */ = {
 			isa = PBXGroup;
 			children = (
+				A3BCAD4E2448A43600CB3D22 /* Models */,
+				A3BCAD4C2448A40200CB3D22 /* Views */,
+				A3BCAD4F2448A43C00CB3D22 /* Presenters */,
+				A3BCAD4D2448A42100CB3D22 /* DataSource */,
 				A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */,
 				A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */,
 				A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */,
-				A3BCAD3024489B4F00CB3D22 /* Main.storyboard */,
 				A3BCAD3324489B5200CB3D22 /* Assets.xcassets */,
-				A3BCAD3524489B5200CB3D22 /* LaunchScreen.storyboard */,
 				A3BCAD3824489B5200CB3D22 /* Info.plist */,
 			);
 			path = StemWords;
@@ -97,6 +103,38 @@
 				A3BCAD4324489B5200CB3D22 /* Info.plist */,
 			);
 			path = StemWordsTests;
+			sourceTree = "<group>";
+		};
+		A3BCAD4C2448A40200CB3D22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3BCAD3024489B4F00CB3D22 /* Main.storyboard */,
+				A3BCAD3524489B5200CB3D22 /* LaunchScreen.storyboard */,
+				A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */,
+				A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3BCAD4D2448A42100CB3D22 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A3BCAD4E2448A43600CB3D22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3BCAD4F2448A43C00CB3D22 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BCAD3724489B5200CB3D22 /* LaunchScreen.storyboard in Resources */,
+				A3BCAD532448A47300CB3D22 /* RootWordTableViewCell.xib in Resources */,
 				A3BCAD3424489B5200CB3D22 /* Assets.xcassets in Resources */,
 				A3BCAD3224489B4F00CB3D22 /* Main.storyboard in Resources */,
 			);
@@ -201,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3BCAD2F24489B4F00CB3D22 /* ViewController.swift in Sources */,
+				A3BCAD522448A47300CB3D22 /* RootWordTableViewCell.swift in Sources */,
 				A3BCAD2B24489B4F00CB3D22 /* AppDelegate.swift in Sources */,
 				A3BCAD2D24489B4F00CB3D22 /* SceneDelegate.swift in Sources */,
 			);
