@@ -41,9 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func updateStemWords(with models: [RootWordTableViewCellPresenter]) {
         tableView.reloadData()
-        
-        models.forEach { print($0.rootWord) }
-        
+                
         if !presenter.stemWordModels.isEmpty {
             clearRootsButton.isEnabled = true
             clearRootsButton.isHidden = false
