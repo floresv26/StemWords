@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A317EC722448B074006B7F4E /* RootWordTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC712448B074006B7F4E /* RootWordTableViewCellPresenter.swift */; };
+		A317EC742448B5A2006B7F4E /* StemWordsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC732448B5A2006B7F4E /* StemWordsPresenter.swift */; };
+		A317EC762448B5E8006B7F4E /* GrammarRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC752448B5E8006B7F4E /* GrammarRules.swift */; };
+		A317EC792448B7E5006B7F4E /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC782448B7E5006B7F4E /* String+Utils.swift */; };
 		A3BCAD2B24489B4F00CB3D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */; };
 		A3BCAD2D24489B4F00CB3D22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */; };
 		A3BCAD2F24489B4F00CB3D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A317EC712448B074006B7F4E /* RootWordTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWordTableViewCellPresenter.swift; sourceTree = "<group>"; };
+		A317EC732448B5A2006B7F4E /* StemWordsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsPresenter.swift; sourceTree = "<group>"; };
+		A317EC752448B5E8006B7F4E /* GrammarRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarRules.swift; sourceTree = "<group>"; };
+		A317EC782448B7E5006B7F4E /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		A3BCAD2724489B4F00CB3D22 /* StemWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StemWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A317EC772448B7C5006B7F4E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A317EC782448B7E5006B7F4E /* String+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A3BCAD1E24489B4F00CB3D22 = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +103,9 @@
 				A3BCAD4C2448A40200CB3D22 /* Views */,
 				A3BCAD4F2448A43C00CB3D22 /* Presenters */,
 				A3BCAD4D2448A42100CB3D22 /* DataSource */,
+				A317EC772448B7C5006B7F4E /* Utils */,
 				A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */,
 				A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */,
-				A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */,
 				A3BCAD3324489B5200CB3D22 /* Assets.xcassets */,
 				A3BCAD3824489B5200CB3D22 /* Info.plist */,
 			);
@@ -109,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A3BCAD3024489B4F00CB3D22 /* Main.storyboard */,
+				A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */,
 				A3BCAD3524489B5200CB3D22 /* LaunchScreen.storyboard */,
 				A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */,
 				A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */,
@@ -126,6 +143,7 @@
 		A3BCAD4E2448A43600CB3D22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A317EC752448B5E8006B7F4E /* GrammarRules.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +151,8 @@
 		A3BCAD4F2448A43C00CB3D22 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				A317EC712448B074006B7F4E /* RootWordTableViewCellPresenter.swift */,
+				A317EC732448B5A2006B7F4E /* StemWordsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -239,9 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A317EC792448B7E5006B7F4E /* String+Utils.swift in Sources */,
 				A3BCAD2F24489B4F00CB3D22 /* ViewController.swift in Sources */,
 				A3BCAD522448A47300CB3D22 /* RootWordTableViewCell.swift in Sources */,
 				A3BCAD2B24489B4F00CB3D22 /* AppDelegate.swift in Sources */,
+				A317EC762448B5E8006B7F4E /* GrammarRules.swift in Sources */,
+				A317EC742448B5A2006B7F4E /* StemWordsPresenter.swift in Sources */,
+				A317EC722448B074006B7F4E /* RootWordTableViewCellPresenter.swift in Sources */,
 				A3BCAD2D24489B4F00CB3D22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,19 +8,21 @@
 
 import UIKit
 
-class RootWordTableViewCell: UITableViewCell {
+class RootWordTableViewCell: UITableViewCell, RootWordTableViewCellPresenterDelegate {
     
     // MARK: - Outlets
     
     @IBOutlet private weak var rootWordLabel: UILabel!
     @IBOutlet private weak var countLabel: UILabel!
     
+    // MARK: - Properties
+    
+//    private let rootWordsCellPresenter: RootWordTableViewCellPresenterDelegate?
     
     // MARK: - Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
