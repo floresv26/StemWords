@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StemWords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-HK-AV2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Stem Words" id="jFN-xF-QYt"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dJQ-xL-1OS">
+                                <rect key="frame" x="16" y="108" width="382" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write word(s)..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="E4K-nw-VuN">
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaE-Mk-DVX">
+                                        <rect key="frame" x="316" y="0.0" width="66" height="34"/>
+                                        <state key="normal" title="Find Root"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-eN-lXo">
+                                <rect key="frame" x="318" y="162" width="80" height="30"/>
+                                <state key="normal" title="Clear Roots"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8r7-cN-iLk">
+                                <rect key="frame" x="0.0" y="212" width="414" height="650"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8r7-cN-iLk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2kw-g9-8HC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ib3-eN-lXo" secondAttribute="trailing" constant="16" id="EGM-j3-g4o"/>
+                            <constraint firstItem="jIG-HK-AV2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FCb-sn-XUU"/>
+                            <constraint firstItem="8r7-cN-iLk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R5j-9z-o1O"/>
+                            <constraint firstItem="ib3-eN-lXo" firstAttribute="top" secondItem="dJQ-xL-1OS" secondAttribute="bottom" constant="20" id="RaN-iU-Ice"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dJQ-xL-1OS" secondAttribute="trailing" constant="16" id="Uu6-qS-Xcx"/>
+                            <constraint firstItem="dJQ-xL-1OS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dIy-ZR-RLP"/>
+                            <constraint firstItem="jIG-HK-AV2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="df4-3g-qLG"/>
+                            <constraint firstItem="dJQ-xL-1OS" firstAttribute="top" secondItem="jIG-HK-AV2" secondAttribute="bottom" constant="20" id="ky8-GI-qhs"/>
+                            <constraint firstItem="8r7-cN-iLk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nSG-sd-bah"/>
+                            <constraint firstItem="jIG-HK-AV2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rar-Wa-qp1"/>
+                            <constraint firstItem="8r7-cN-iLk" firstAttribute="top" secondItem="ib3-eN-lXo" secondAttribute="bottom" constant="20" id="ri6-Cs-ynt"/>
+                            <constraint firstItem="ib3-eN-lXo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="318" id="wCQ-Jy-e8L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
         </scene>
     </scenes>
 </document>
