@@ -54,7 +54,8 @@ class StemWordsPresenter {
     }
     
     func clearStemWords() {
-        stemWordModels = []
+        stemWordModels.removeAll()
+        stemWords.removeAll()
         delegate?.updateStemWords(with: stemWordModels)
     }
     
@@ -135,6 +136,8 @@ class StemWordsPresenter {
             
             return presenter
         }
+        
+        // TODO: Order alphabetically ignoring case
         
         stemWordModels = updatedStemWordModels
     }

@@ -31,14 +31,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         presenter.setViewDelegate(delegate: self)
         
+        if presenter.stemWordModels.isEmpty {
+            clearRootsButton.isHidden = true
+            tableView.isHidden = true
+        }
+        
         tableView.register(UINib(nibName: "RootWordTableViewCell", bundle: nil), forCellReuseIdentifier: "RootWordCellIdentifier")
     }
     
     func updateStemWords(with models: [RootWordTableViewCellPresenter]) {
         tableView.reloadData()
         
+        models.forEach { print($0.rootWord) }
+        
         if !presenter.stemWordModels.isEmpty {
             clearRootsButton.isEnabled = true
+            clearRootsButton.isHidden = false
+            tableView.isHidden = false
+        } else {
+            clearRootsButton.isEnabled = false
+            clearRootsButton.isHidden = true
+            tableView.isHidden = true
         }
     }
     
