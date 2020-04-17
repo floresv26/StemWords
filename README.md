@@ -29,18 +29,18 @@ iOS 13.4 or later
 2. Once you have the project open in Xcode, select an iPhone or iPad device and run the project
 3. Once the project is running, insert text in the text field to find the root words. Below are the list of suffixes from the grammar rules. 
 
-These are common suffixes in the language that can be removed to find the root word  
+    These are common suffixes in the language that can be removed to find the root word:
     - 'L'
     - 'LZ'
     - 'EVM'
     - 'ZQ'
     
-These suffixes require adding back letters to determine the root word  
+    These suffixes require adding back letters to determine the root word: 
     - remove 'PZ' add 'A'
     - remove 'PZL' add 'AZ'
     - remove 'EZL' add 'R'
     
-Example words to try  
+    Example words to try:
     - MZV
     - EV
     - KMZ
