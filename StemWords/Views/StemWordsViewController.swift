@@ -81,7 +81,7 @@ class StemWordsViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: - Actions
     
     @IBAction func textFieldEditingChanged(_ sender: Any) {
-        if let text = textField.text, !text.isEmpty {
+        if let text = textField.text, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             findRootButton.isEnabled = true
         } else {
             findRootButton.isEnabled = false
@@ -104,7 +104,7 @@ class StemWordsViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: - Helpers
     
     private func findRoots() {
-        if let text = textField.text, !text.isEmpty {
+        if let text = textField.text, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             presenter.findRootWords(from: text)
             textField.text = nil
             findRootButton.isEnabled = false

@@ -69,7 +69,7 @@ class StemWordsPresenter {
         // remove non alphabetic characters from words
         words.forEach { word in
             let cleanWord = word.components(separatedBy: unwantedCharacters).joined()
-            cleanWords.append(cleanWord)
+            cleanWords.append(cleanWord.uppercased())
         }
         
         return cleanWords

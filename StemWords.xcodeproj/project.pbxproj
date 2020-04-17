@@ -40,6 +40,7 @@
 		A317EC782448B7E5006B7F4E /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		A317EC7A2448F9C8006B7F4E /* StemWordsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsPresenterTests.swift; sourceTree = "<group>"; };
 		A317EC7C2449195A006B7F4E /* StemWordsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsViewControllerTests.swift; sourceTree = "<group>"; };
+		A317EC9B24494B2C006B7F4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A3BCAD2724489B4F00CB3D22 /* StemWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StemWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		A3BCAD1E24489B4F00CB3D22 = {
 			isa = PBXGroup;
 			children = (
+				A317EC9B24494B2C006B7F4E /* README.md */,
 				A3BCAD2924489B4F00CB3D22 /* StemWords */,
 				A3BCAD4024489B5200CB3D22 /* StemWordsTests */,
 				A3BCAD2824489B4F00CB3D22 /* Products */,
