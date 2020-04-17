@@ -11,13 +11,14 @@
 		A317EC742448B5A2006B7F4E /* StemWordsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC732448B5A2006B7F4E /* StemWordsPresenter.swift */; };
 		A317EC762448B5E8006B7F4E /* GrammarRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC752448B5E8006B7F4E /* GrammarRules.swift */; };
 		A317EC792448B7E5006B7F4E /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC782448B7E5006B7F4E /* String+Utils.swift */; };
+		A317EC7B2448F9C8006B7F4E /* StemWordsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC7A2448F9C8006B7F4E /* StemWordsPresenterTests.swift */; };
+		A317EC7D2449195A006B7F4E /* StemWordsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317EC7C2449195A006B7F4E /* StemWordsViewControllerTests.swift */; };
 		A3BCAD2B24489B4F00CB3D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */; };
 		A3BCAD2D24489B4F00CB3D22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */; };
-		A3BCAD2F24489B4F00CB3D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */; };
+		A3BCAD2F24489B4F00CB3D22 /* StemWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD2E24489B4F00CB3D22 /* StemWordsViewController.swift */; };
 		A3BCAD3224489B4F00CB3D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD3024489B4F00CB3D22 /* Main.storyboard */; };
 		A3BCAD3424489B5200CB3D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD3324489B5200CB3D22 /* Assets.xcassets */; };
 		A3BCAD3724489B5200CB3D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD3524489B5200CB3D22 /* LaunchScreen.storyboard */; };
-		A3BCAD4224489B5200CB3D22 /* StemWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD4124489B5200CB3D22 /* StemWordsTests.swift */; };
 		A3BCAD522448A47300CB3D22 /* RootWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */; };
 		A3BCAD532448A47300CB3D22 /* RootWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -37,16 +38,17 @@
 		A317EC732448B5A2006B7F4E /* StemWordsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsPresenter.swift; sourceTree = "<group>"; };
 		A317EC752448B5E8006B7F4E /* GrammarRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarRules.swift; sourceTree = "<group>"; };
 		A317EC782448B7E5006B7F4E /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		A317EC7A2448F9C8006B7F4E /* StemWordsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsPresenterTests.swift; sourceTree = "<group>"; };
+		A317EC7C2449195A006B7F4E /* StemWordsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsViewControllerTests.swift; sourceTree = "<group>"; };
 		A3BCAD2724489B4F00CB3D22 /* StemWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StemWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3BCAD2A24489B4F00CB3D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3BCAD2C24489B4F00CB3D22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3BCAD2E24489B4F00CB3D22 /* StemWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsViewController.swift; sourceTree = "<group>"; };
 		A3BCAD3124489B4F00CB3D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3BCAD3324489B5200CB3D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3BCAD3624489B5200CB3D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3BCAD3824489B5200CB3D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3BCAD3D24489B5200CB3D22 /* StemWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StemWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3BCAD4124489B5200CB3D22 /* StemWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StemWordsTests.swift; sourceTree = "<group>"; };
 		A3BCAD4324489B5200CB3D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWordTableViewCell.swift; sourceTree = "<group>"; };
 		A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootWordTableViewCell.xib; sourceTree = "<group>"; };
@@ -115,8 +117,9 @@
 		A3BCAD4024489B5200CB3D22 /* StemWordsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3BCAD4124489B5200CB3D22 /* StemWordsTests.swift */,
 				A3BCAD4324489B5200CB3D22 /* Info.plist */,
+				A317EC7A2448F9C8006B7F4E /* StemWordsPresenterTests.swift */,
+				A317EC7C2449195A006B7F4E /* StemWordsViewControllerTests.swift */,
 			);
 			path = StemWordsTests;
 			sourceTree = "<group>";
@@ -125,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				A3BCAD3024489B4F00CB3D22 /* Main.storyboard */,
-				A3BCAD2E24489B4F00CB3D22 /* ViewController.swift */,
+				A3BCAD2E24489B4F00CB3D22 /* StemWordsViewController.swift */,
 				A3BCAD3524489B5200CB3D22 /* LaunchScreen.storyboard */,
 				A3BCAD502448A47300CB3D22 /* RootWordTableViewCell.swift */,
 				A3BCAD512448A47300CB3D22 /* RootWordTableViewCell.xib */,
@@ -210,6 +213,7 @@
 					};
 					A3BCAD3C24489B5200CB3D22 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 						TestTargetID = A3BCAD2624489B4F00CB3D22;
 					};
 				};
@@ -260,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A317EC792448B7E5006B7F4E /* String+Utils.swift in Sources */,
-				A3BCAD2F24489B4F00CB3D22 /* ViewController.swift in Sources */,
+				A3BCAD2F24489B4F00CB3D22 /* StemWordsViewController.swift in Sources */,
 				A3BCAD522448A47300CB3D22 /* RootWordTableViewCell.swift in Sources */,
 				A3BCAD2B24489B4F00CB3D22 /* AppDelegate.swift in Sources */,
 				A317EC762448B5E8006B7F4E /* GrammarRules.swift in Sources */,
@@ -274,7 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BCAD4224489B5200CB3D22 /* StemWordsTests.swift in Sources */,
+				A317EC7B2448F9C8006B7F4E /* StemWordsPresenterTests.swift in Sources */,
+				A317EC7D2449195A006B7F4E /* StemWordsViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +468,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3YLCP7U59;
 				INFOPLIST_FILE = StemWordsTests/Info.plist;
@@ -474,6 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vanessaflores.StemWordsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StemWords.app/StemWords";
@@ -485,6 +492,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3YLCP7U59;
 				INFOPLIST_FILE = StemWordsTests/Info.plist;

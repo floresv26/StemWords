@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StemWordsViewController.swift
 //  StemWords
 //
 //  Created by Vanessa Flores on 4/16/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, StemWordsPresenterDelegate {
+class StemWordsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, StemWordsPresenterDelegate {
     
     // MARK: - Outlets
     
@@ -19,16 +19,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Properties
     
-    private let presenter = StemWordsPresenter()
+    let presenter = StemWordsPresenter()
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
         presenter.setViewDelegate(delegate: self)
         
         if presenter.stemWordModels.isEmpty {
