@@ -8,7 +8,7 @@ Stem Words is an iOS application that takes a user's input and removes or replac
 
 ## Build and Runtime Requirements
 
-Xcode 11.4 or later
+Xcode 11.4 or later  
 iOS 13.4 or later
 
 ## Setup and Run 
@@ -19,7 +19,7 @@ iOS 13.4 or later
 2. Under "Clone with HTTPS", click copy to clipboard
 3. Open Terminal
 4. Change your current working directory to the location where you want the cloned directory made
-5. Type `git clone` followed by the URL you copied in the second step
+5. Type `git clone` followed by the URL you copied in the second step  
     `$ git clone https://github.com/floresv26/StemWords.git`
 6. Repository is now cloned
 
@@ -29,18 +29,18 @@ iOS 13.4 or later
 2. Once you have the project open in Xcode, select an iPhone or iPad device and run the project
 3. Once the project is running, insert text in the text field to find the root words. Below are the list of suffixes from the grammar rules. 
 
-These are common suffixes in the language that can be removed to find the root word
+These are common suffixes in the language that can be removed to find the root word  
     - 'L'
     - 'LZ'
     - 'EVM'
     - 'ZQ'
     
-These suffixes require adding back letters to determine the root word
+These suffixes require adding back letters to determine the root word  
     - remove 'PZ' add 'A'
     - remove 'PZL' add 'AZ'
     - remove 'EZL' add 'R'
     
-Example words to try
+Example words to try  
     - MZV
     - EV
     - KMZ
